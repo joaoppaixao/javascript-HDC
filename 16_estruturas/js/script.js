@@ -112,5 +112,61 @@ if (username === "João") {
 let p = 0;
 
 while (p < 5) {
-    console.log(p);
+    console.log(`Repetindo ${p}`);
+    p += 1;
 }
+
+// 11 - do while
+
+let o = 10;
+ do {
+    console.log(`Valor de o: ${o}`);
+    o--
+ } while (o >= 1);
+
+ // 12 - for 
+
+ for (let i = 1; i <= 10; i++) {
+    console.log(`Repetindo algo ${i}...`);
+ }
+
+ // 14 - break
+
+ for(let i = 20; i > 10; i--) {
+    console.log(`O valor de i é: ${i}`)
+
+    if (i === 12) {
+        console.log("O i é 12!")
+        break;
+    }
+ }
+
+ // 15 - continue
+
+ for( let i = 0; i < 10; i++) {
+    // operador de resto = %
+    if (i % 2 === 0) {
+        console.log("Número par!");
+        continue;
+    }
+
+    console.log(i);
+ }
+
+ // 16 - switch
+
+ const job = "Programador"
+
+ switch(job) {
+    case "Programador":
+        console.log("Você é um programador!");
+        break;
+    case "Advogado":
+        console.log("Você é um advogado!");
+        break;
+    case "Engenheiro":
+        console.log("Você é um engenheiro!");
+        break;
+    default:
+        console.log("Profissão não encontrada.");    
+ }
