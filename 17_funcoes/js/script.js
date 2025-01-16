@@ -62,5 +62,96 @@ function escopoAninhado() {
 
             console.log(m);
         }
+
+        console.log(m);
+    }
+
+    console.log(m);
+}
+
+escopoAninhado();
+
+console.log(m);
+
+// 5 - arrow function
+const testeArrow = () => {
+    console.log("Esta é uma arrow function")
+}
+
+testeArrow();
+
+const parOuImpar = (n) => {
+    if (n % 2 === 0) {
+        console.log("É par!");
+        return;
+    } 
+    
+    console.log("É ímpar!");
+}
+
+parOuImpar(12);
+
+parOuImpar(3);
+
+// 6 - mais sobre arrow functions
+const raizQuadrada = (x) => {
+    return x * x;
+}
+
+console.log(raizQuadrada(26));
+
+const raizQuadrada2 = (x) => x * x
+
+console.log(raizQuadrada2(12));
+
+const helloWorld = () => console.log("Hello, World! ");
+
+helloWorld();
+
+// 7 - parametro opcional
+
+const multiplication = function(m, n) {
+    if (n === undefined) {
+        return m * 2;
+    } else {
+        return m * n;
     }
 }
+
+console.log(multiplication(5));
+
+console.log(multiplication(3, 12));
+
+const greeting = (name) => {
+
+    if(!name) {
+        return console.log("Olá!");
+    } else {
+        return console.log(`Olá, ${name}!`);
+    }
+ }
+
+ greeting();
+
+ greeting("João");
+
+ // 8 - valor default
+
+ const customGreeting = (name, greet = "Olá") => {
+    return console.log(`${greet}, ${name}!`);
+ }
+
+ customGreeting("João Paixão");
+ 
+ customGreeting("Bruna", "Bom dia");
+
+ const repeatText = (text, repeat = 2) => {
+    
+    for (let i = 0; i < repeat; i++) {
+        console.log(text);
+    }
+ }
+
+ repeatText("teste");
+
+ repeatText("Teste 2", 5);
