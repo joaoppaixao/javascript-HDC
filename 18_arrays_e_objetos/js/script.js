@@ -85,3 +85,93 @@ const obj2 = {
 Object.assign(obj2, obj);
 
 console.log(obj2);
+
+// 8 - conhecendo melhor os objetos
+console.log(Object.keys(obj));
+console.log(Object.keys(obj2));
+console.log(Object.keys(car));
+
+console.log(Object.entries(car));
+
+// 9 - mutação
+const a = {
+    name: "João"
+}
+
+const b = a;
+
+console.log(a);
+console.log(b);
+
+console.log(a === b);
+
+a.age = 19;
+
+console.log(a);
+console.log(b);
+
+delete b.age;
+
+console.log(a);
+console.log(b);
+
+// 10 - loop em array
+const users = ["João", "Bruna", "Ana", "Barata"];
+
+for(let i = 0; i < users.length; i++) {
+    console.log(`Os usuários são: [${users[i]}]`);
+}
+
+// 11 - push e pop
+const array = ["a", "b", "c"];
+
+array.push("d");
+
+console.log(array);
+
+console.log(array.length);
+
+array.pop();
+
+console.log(array);
+
+const itemRemovido = array.pop();
+
+console.log(itemRemovido);
+
+console.log(array);
+
+array.push("c", "d", "e");
+
+console.log(array);
+
+// 12 - shift e unshift
+
+const letters = ["a", "b", "c"];
+
+const letter = letters.shift();
+
+console.log(letter);
+
+console.log(letters);
+
+letters.unshift("d", "e", "f");
+
+letters.unshift("j");
+
+console.log(letters);
+
+// 13 - indexOf e lastIndexOf
+const myElements = ["Morango", "Abacaxi", "Uva", "Banana", "Abacaxi"];
+
+console.log(myElements.indexOf("Uva"));
+console.log(myElements.indexOf("Abacaxi"));
+
+console.log(myElements[2]);
+console.log(myElements[myElements.indexOf("Uva")])
+
+console.log(myElements.lastIndexOf("Abacaxi"));
+
+console.log(myElements.indexOf("Kiwi"));
+
+console.log(myElements.lastIndexOf("Kiwi"));
