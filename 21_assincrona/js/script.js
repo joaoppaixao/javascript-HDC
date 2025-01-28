@@ -83,4 +83,44 @@ const p3 = new Promise((resolve, reject) => {
     }
 });
 
-Promise.all([p1, p2, p3]).then((values) => console.log(values));
+// Promise.all([p1, p2, p3]).then((values) => console.log(values));
+
+// 7 - async functions
+async function somarComDelay(n, m) {
+    return n + m;
+}
+
+somarComDelay(12, 26).then((value) => {
+    console.log(`O valor da soma é: ${value}.`)
+});
+
+console.log("teste async");
+
+// 8 - async await
+function resolveComDelay() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve("Resolveu a promise")
+        }, 2000);
+    });
+}
+
+async function chamadaAsync() {
+    console.log("Chamando a promise, e esperando o resultado.");
+    const result = await resolveComDelay();
+    console.log(`O resultado chegou: ${result}!`);
+}
+
+chamadaAsync();
+
+// 9 - generators
+function* generator() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const gen = generator();
+
+console.log(gen.next().value);
+console.log(gen.next().value);
