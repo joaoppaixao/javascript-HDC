@@ -34,3 +34,12 @@ btnInsideContainer.addEventListener("click", (e) => {
     e.stopImmediatePropagation();
     console.log("Evento 2")
 });
+
+// 5 - removendo evento padrao
+const a = document.querySelector("a");
+
+a.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    console.log("Não alterou a página para o google!")
+})
