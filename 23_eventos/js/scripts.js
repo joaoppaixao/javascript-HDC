@@ -42,4 +42,14 @@ a.addEventListener("click", (e) => {
     e.preventDefault();
 
     console.log("Não alterou a página para o google!")
-})
+});
+
+// 6 - eventos de tecla
+document.addEventListener("keyup", (e) => {
+    console.log(`Soltou a tecla ${e.key}.`)
+});
+
+document.addEventListener("keydown", (e) => {
+    console.log(`Apertou a tecla ${e.key}.`)
+});
+
