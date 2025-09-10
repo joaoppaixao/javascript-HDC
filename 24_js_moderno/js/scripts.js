@@ -101,3 +101,29 @@ product.map((product) => {
 })
 
 console.log(product);
+
+// 5 - template literals
+
+const userName = "João";
+const age = 20
+
+console.log(`O nome do usuário é ${userName} e tem ${age} anos.`);
+
+// 6 - destructuring
+
+const fruits = ['Maçã', 'Mamão', 'Laranja'];
+
+const [f1, f2, f3] = fruits;
+
+console.log(f1, f2);
+
+const productDetails = {
+    name: 'Mouse',
+    price: 29.99,
+    category: 'Periféricos',
+    color: 'Cinza',
+};
+
+const { name: productName, price, category, color } = productDetails;
+
+console.log(`O nome do produto é ${productName}, ele custa R$${price} e é ${color}.`)
