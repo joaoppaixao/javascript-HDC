@@ -157,7 +157,7 @@ class Product {
         this.price = price;
     }
 
-    produvtWithDiscount(discount) {
+    productWithDiscount(discount) {
         return this.price * ((100 - discount) / 100)
     }
 }
@@ -166,4 +166,26 @@ const shirt = new Product("Camisa Corinthians", 300);
 
 console.log(shirt)
 
-console.log(shirt.produvtWithDiscount(10))
+console.log(shirt.productWithDiscount(10))
+
+// 9 - herança
+class ProductWithAttributes extends Product {
+
+    constructor(name, price, colors) {
+        super(name, price)
+        this.colors = colors;
+    }
+
+    showColors() {
+        console.log("As cores são: ")
+        this.colors.forEach((color) => {
+            console.log(color)
+        })
+    }
+}
+
+const hat = new ProductWithAttributes("Chapéu", 99.99, ["Preto", "Branco", "Azul"]);
+
+console.log(hat);
+
+console.log(hat.showColors());
