@@ -19,3 +19,45 @@ if (b > 10) {
 }
 
 console.log(a);
+
+// 2 - arrow function
+
+const sum = function sum(a, b) {
+    return a + b;
+}
+
+const arrowSum = (a, b) => a + b;
+
+console.log(sum(5, 5));
+
+console.log(arrowSum(5, 5));
+
+const greeting = (name) => {
+    if (name) {
+        return 'Olá ' + name + '!';
+    } else {
+        return 'Olá!';
+    }
+}    
+
+console.log(greeting('João'));
+console.log(greeting());
+
+const user = {
+    name: 'João',
+    sayUserName() {
+        setTimeout(function() {
+
+            console.log(this)
+            console.log('Username: ' + this.name);
+        }, 1000)
+    },
+    sayUserNameArrow() {
+        setTimeout(() => {
+            console.log('Username: ' + this.name);
+        }, 2000)
+    }
+}
+
+user.sayUserName();
+user.sayUserNameArrow();
